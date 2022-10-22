@@ -1,0 +1,234 @@
+@import url('http://fonts.cdnfonts.com/css/episode-1');
+@import url('http://fonts.cdnfonts.com/css/ketchup-spaghetti');
+@import url('http://fonts.cdnfonts.com/css/fhperception');
+
+:root {
+    --ff-episode: 'EPISODE I', sans-serif;
+    --ff-ks: 'Ketchup Spaghetti', sans-serif;
+    --ff-fhp: 'Fh_Perception', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border:none;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.layout {
+    display: block;
+    height: 800px;
+    width: 1920px;
+}
+.header_row {
+    text-align: center;
+    background-color:aliceblue;
+    width: 100%;
+}
+.header {
+    padding-top: 50px;
+}
+.header h2,.wheather_container p {
+    font-family: var(--ff-episode);
+}
+.header p {
+    margin-top: 10px;
+    font-family: var(--ff-fhp);
+    font-size: 25px;
+}   
+.main {
+    padding-top: 60px;
+    padding-bottom: 25px;
+    background-color: aliceblue;
+    position: relative;
+}
+.main .wheather_container {
+    margin: 0 auto;
+    text-align: center;
+    width:400px;
+}
+
+.wheather_collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+li {
+    list-style-type: none;
+}
+.wheather_collection .sunny::before{
+    content: " ";
+    background-image: url('./img/sunny.png');
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.wheather_collection .cloudy::before{
+    content: " ";
+    background-image: url('./img/cloudy.png');
+    display: block;
+    width: 40px;
+    height: 40px; 
+}
+.wheather_collection .rainy::before{
+    content: " ";
+    background-image: url('./img/rainy.png');
+    display: block;
+    width: 40px;
+    height: 40px; 
+}
+.wheather_collection .thunder::before{
+    content: " ";
+    background-image: url('./img/thunder.png');
+    display: block;
+    width: 40px;
+    height: 40px; 
+}
+.wheather_collection .windy::before{
+    content: " ";
+    background-image: url('./img/windy.png');
+    display: block;
+    width: 40px;
+    height: 40px; 
+}
+
+.month_container {
+    padding-top: 30px;
+    display: block;
+    width: 1400px;
+    margin: 0 auto;
+}
+.first_period, .second_period,.third_period {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.january,.february,.march,
+.april, .may,.june,.july,
+.august, .september,.october,
+.november,.december {
+    width: 300px;
+    text-align: center;
+}
+.january h3, .february h3,.march h3,
+.april h3,.may h3,.june h3,.july h3,
+.august h3, .september h3,.october h3,
+.november h3,.december h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-family:var(--ff-fhp);
+}
+.january .week,.february .week, .march .week,
+.april .week, .may .week,.june .week, .july .week,
+.august .week, .september .week,.october .week,
+.november .week, .december .week {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: var(--ff-ks);
+    height: 20px;
+}
+.week li {
+    width: 20px;
+}
+
+.january_week_one,.february_week_one, .march_week_one,
+.april_week_one,.june_week_one,.july_week_one,
+.august_week_one, .september_week_one,.october_week_one,
+.november_week_one,.december_week_one {
+    display: flex;
+    justify-content: flex-end;
+}
+.january_week_six,.february_week_five, .march_week_five,
+.may_week_five, .june_week_five,.july_week_six,
+.august_week_five, .september_week_five,.october_week_six,.november_week_five {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.january_week_six li,.february_week_five li,.march_week_five li,
+.may_week_five li,.june_week_five li, .august_week_five li,
+.september_week_five li,.october_week_six li, .november_week_five li {
+    margin-right: 26.5px;
+}
+
+.february_week_one li,.march_week_one li,.april_week_one li,
+.june_week_one li,.july_week_one li,.august_week_one li,
+.september_week_one li, .november_week_one li,.december_week_one li {
+    margin-left: 26.5px;
+}
+ .january_week_two, .january_week_three,
+.january_week_four, .january_week_five,
+.february_week_two, .february_week_three,
+.february_week_four, .march_week_two, .march_week_three,
+.march_week_four, .april_week_two,.april_week_three,
+.april_week_four, .april_week_five, .may_week_one, .may_week_two,
+.may_week_three, .may_week_four, .june_week_two, .june_week_three, .june_week_four,
+.july_week_two, .july_week_three, .july_week_four, .july_week_five,
+.august_week_two, .august_week_three, .august_week_four, .september_week_two, .september_week_three, .september_week_four,
+.october_week_two,.october_week_three,.october_week_four,.october_week_five,.november_week_two,.november_week_three, .november_week_four,
+.december_week_two, .december_week_three, .december_week_four, .december_week_five {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+.january_week_one li, .january_week_two li, .january_week_three li,.january_week_four li, .january_week_five li,.january_week_six li,
+.february_week_one li, .february_week_two li, .february_week_three li,.february_week_four li, .february_week_five li,
+.march_week_one li,.march_week_two li, .march_week_three li, .march_week_four li, .march_week_five li,
+.april_week_one li, .april_week_two li, .april_week_three li, .april_week_four li, .april_week_five li,
+.may_week_one li, .may_week_two li, .may_week_three li, .may_week_four li, .may_week_five li,
+.june_week_one li, .june_week_two li, .june_week_three li, .june_week_four li, .june_week_five li,
+.july_week_one li, .july_week_two li, .july_week_three li, .july_week_four li, .july_week_five li, .july_week_six li,
+.august_week_one li, .august_week_two li, .august_week_three li, .august_week_four li, .august_week_five li,
+.september_week_one li, .september_week_two li, .september_week_three li, .september_week_four li, .september_week_five li,
+.october_week_one li,.october_week_two li,.october_week_three li,.october_week_four li,.october_week_five li,.october_week_six li,
+.november_week_one li, .november_week_two li, .november_week_three li, .november_week_four li, .november_week_five li,
+.december_week_one li, .december_week_two li, .december_week_three li, .december_week_four li, .december_week_five li {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #444242;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    padding-top: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fixed_btns_container {
+    position: fixed;
+    top: 50px;
+    right: 0;
+}
+.fixed_random_btn {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, darkkhaki, lightgreen);
+    border-radius: 50%;
+    font-family: var(--ff-episode);
+    font-size: 18px;
+}
+.clear_all {
+    margin-top: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    border-radius: 50%;
+    font-family: var(--ff-episode);
+    font-size: 18px;
+}
+.fixed_random_btn:hover, .clear_all:hover {
+    cursor: pointer;
+}
